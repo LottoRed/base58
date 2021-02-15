@@ -11,7 +11,7 @@ while True:
   if not line:
     break
   line = line[:-1] # remove newline
-  adr160 = base58.b58decode_check(line).encode('hex')[2:]
+  adr160 = base58.b58decode_check(line).hex()[2:]
   f2.write(str(adr160) + "\n")
   count += 1
 
